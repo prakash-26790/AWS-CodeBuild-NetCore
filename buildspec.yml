@@ -1,0 +1,15 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo Restore started on `date`
+      - dotnet restore SampleCore.csproj
+  build:
+    commands:
+      - echo Build started on `date`
+      - dotnet publish -c release -o ./build_output SampleCore.csproj
+artifacts:
+  files:
+    - CodeBuild-SampleCore/build_output/**/*
+    - scripts/**/*
+    - appspec.yml
