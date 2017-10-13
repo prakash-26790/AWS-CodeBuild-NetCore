@@ -12,7 +12,7 @@ hooks:
       runas: root
 
   BeforeInstall:
-    - location: scripts/remove_application.sh
+    - location: scripts/remove_application
       timeout: 300
       runas: root
 
