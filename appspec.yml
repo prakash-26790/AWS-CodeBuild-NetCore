@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: CodeBuild-SampleCore/build_output
-    destination: /home/ubuntu/aspnetcoreapp
+    destination: /home/ec2-user/aspnetcoreapp
   - source: scripts/virtualhost.conf
-    destination: /home/ubuntu/aspnetcoreapp
+    destination: /home/ec2-user/aspnetcoreapp
 hooks:
   ApplicationStop:
     - location: scripts/stop_service
